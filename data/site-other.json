@@ -1,0 +1,65 @@
+{ "apps": [
+  {
+     "index":"country",
+     "name":"Country and City",
+     "introduce":"Query 4800 cities and 250 countries information.",
+     "description":"Here is the tool book to let you search all of 250 countries and their cities information, the country information includes country name, official state name. sovereignty, alpha-2 code, alpha-3 code, numeric code, internet ccTLD, capital, call code, timezone, population, national flag ration and currency information, the city information includes city name, admin, city type, GPS coordinate and city population.",
+     "video":"",
+     "links":[
+     	"http://play.google.com/store/apps/details?id=com.jchip.country.city",
+     	"https://apps.apple.com/ca/app/country-code-cities/id1619686364"
+     ]
+  },
+  {
+     "index":"country-wear",
+     "name":"Country and City (Watch)",
+     "introduce":"Query 4800 cities and 250 countries information on Wear OS.",
+     "description":"Here is the tool book to let you search all of 250 countries and their cities information, the country information includes country name, official state name. sovereignty, alpha-2 code, alpha-3 code, numeric code, internet ccTLD, capital, call code, timezone, population, national flag ration and currency information, the city information includes city name, admin, city type, GPS coordinate and city population.",
+     "video":"",
+     "links":[
+     	"https://play.google.com/store/apps/details?id=com.jchip.wear.country.city",
+     	"https://apps.apple.com/us/app/country-and-city/id1659163906"
+     ]
+  },
+  {
+     "index":"word",
+     "name":"Make a Word",
+     "introduce":"Make a word from letters, improve your vocabulary and your spelling.",
+     "description":"Make a Word for Wear OS is an implementation of the word challenge game, classic brain teasing addictive word games in the market. The goal of the word game is to make as many words as you can from given 3 - 9 letters.",
+     "video":"",
+     "links":[
+     	"https://play.google.com/store/apps/details?id=com.jchip.word.maker",
+     	"https://apps.apple.com/us/app/make-the-word/id6444748382"
+     ]
+  },
+  {
+     "index":"word-wear",
+     "name":"Make a Word (Watch)",
+     "introduce":"Make a word from letters, improve your vocabulary and your spelling on Wear OS.",
+     "description":"Make a Word for Wear OS is an implementation of the word challenge game, classic brain teasing addictive word games in the market. The goal of the word game is to make as many words as you can from given 3 - 9 letters.",
+     "video":"",
+     "links":[
+     	"https://play.google.com/store/apps/details?id=com.jchip.word.maker.wear",
+     	"https://apps.apple.com/us/app/make-a-word-watch/id6444740249"
+     ]
+  },
+  {
+     "index":"phrase",
+     "name":"900 Most Common Phrases",
+     "introduce":"Learning 900 English/Chinese most common phrases.",
+     "description":"Here is the tool to let you learn 900 English/Chinese (Simplified and Traditional) most basic phrases on your home screen widget, don't need to start an app and learn in any spare time.",
+     "video":"",
+     "links":["https://play.google.com/store/apps/details?id=com.jchip.phrases900"]
+  },
+  {
+     "index":"word-card",
+     "name":"Word Card",
+     "introduce":"Learning English/Chinese (Simplified and Traditional) vocabulary.",
+     "description":"Here is the tool to let you learn English/Chinese (Simplified and Traditional) vocabulary, and also support to put your vocabulary on your home screen widget, don't need to start an app and learn vocabulary in any spare time.",
+     "video":"",
+     "links":[
+        "https://play.google.com/store/apps/details?id=com.jchip.word"
+     ]
+  }
+  
+] }

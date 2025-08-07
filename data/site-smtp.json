@@ -1,0 +1,7 @@
+{
+     "server":"smtp.elasticemail.com",
+     "user":["j", "chip", "game", "@", "gmail", ".", "com"],
+     "token":"815337BACE739B92BF8D9E16A01A910B75C7",
+     "token-http":"C807F70EAFF1B1CD2264C942AC7D147A9990863D243EBB32C95211139D8EEABABFB5D6202B49953F9429022960DB73DA",
+     "login":"https://app.elasticemail.com/login"
+}

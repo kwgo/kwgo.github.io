@@ -1,0 +1,50 @@
+{ "apps": [
+  {
+     "index":"boxman",
+     "name":"Sokoban (Boxman) Classic",
+     "introduce":"Classic Sokoban puzzle game, with 306 mentally stimulating levels.",
+     "description":"Boxman is a free implementation of the classic box-pushing puzzle game with 306 free to play levels. Enjoy!",
+     "video":"https://www.youtube.com/embed/Rs8VLuUnh9U?wmode=opaque",
+     "links":[
+     	"http://play.google.com/store/apps/details?id=com.jchip.sokomon",
+     	"https://apps.apple.com/us/app/sokoban-boxman-classic/id1546106967",
+     	"https://www.microsoft.com/en-us/p/sokoban-boxman-classic/9mzh5pwh48cg",
+     	"https://store.steampowered.com/app/1406570/Sokoban_Boxman_Classic",
+        "https://apps.apple.com/us/app/sokoban-boxman-classic-pal/id1551513959"
+     ]
+  },
+  {
+     "index":"gianta",
+     "name":"Sokoban Gianta",
+     "introduce":"Box pushing puzzle game, with a giant mentally stimulating level.",
+     "description":"Sokoban Gianta is an implementation of the classic box-pushing puzzle game with a single giant level. Enjoy!",
+     "video":"https://www.youtube.com/embed/xEDtrU4i_p8?wmode=opaque",
+     "links":[
+     	"https://play.google.com/store/apps/details?id=com.jchip.gianta",
+     	"https://apps.apple.com/us/app/sokoban-gianta/id1617335915",
+     	"https://www.xbox.com/en-us/games/store/sokoban-gianta/9pgb8ks4l29j",
+     	"https://store.steampowered.com/app/1500400/Sokoban_Gianta/",
+        "https://apps.apple.com/us/app/sokoban-gianta-pal/id1616543921"
+     ]
+  },
+  {
+     "index":"collection",
+     "name":"Sokoban (Boxman) Collection",
+     "introduce":"Box pushing puzzle game, with 654 collection levels.",
+     "description":"Sokoban (Boxman) Collection is a free implementation of the classic box-pushing puzzle game with 654 free to play levels. Enjoy!.",
+     "video":"",
+     "links":["https://play.google.com/store/apps/details?id=com.jchip.sokomon.collection"]
+  },
+  {
+     "index":"collection-wear",
+     "name":"Sokoban (Boxman) Watch",
+     "introduce":"Sokoban (Boxman) Watch for Wear OS is an implementation of the classic box-pushing puzzle game.",
+     "description":"Sokoban (Boxman) Watch for Wear OS is an implementation of the classic box-pushing puzzle game with 352 free to play levels. Enjoy!.",
+     "video":"",
+     "links":[
+        "https://play.google.com/store/apps/details?id=com.jchip.sokoban.wear",
+        "https://apps.apple.com/us/app/sokoban-boxman-watch/id1549386609"
+     ]
+  }
+  
+] }
