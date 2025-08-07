@@ -1,0 +1,33 @@
+defaultTasks 'site', 'copysite'
+
+task copySite(type: Copy) {
+    from ('.')
+    into 'C:/dev/domains/d-domain01/servers/AdminServer/tmp/_WL_user/jmig.cvwm.webstart/u2l06a/war'
+    exclude ".gradle"
+    exclude ".settings"
+    exclude ".gitignore"
+    exclude ".project"
+    exclude "build.gradle"
+}
+
+task zipSite(type: Zip) {
+	from '.'
+	include '.'
+	include '*/**'
+
+	exclude ".gradle"
+	exclude ".settings"
+	exclude ".gitignore"
+	exclude ".project"
+
+	exclude "build.gradle"
+	exclude "web-site.zip"
+   
+	archiveName 'web-site.zip'
+	destinationDir(file('.'))
+	//https://hpanel.hostinger.com/hosting/jchipgame.com
+}
+
+task site {
+    println 'Gradle project start!'
+}
