@@ -1,0 +1,57 @@
+<div data-ng-controller="site-banner-controll">
+
+<div class="row border rounded mb-1" data-ng-repeat="app in apps">
+
+  <div class="mt-1">
+    <table class="table-borderless w-100">
+      <tr>
+        <td class="pt-1 pe-1" style="width: 2.75rem">
+	      <img data-ng-src="image/store/{{app.index}}-small.png" class="img-fluid rounded" alt="" />
+        </td>
+        <td class="align-bottom pb-1">
+           <div class="bg-primary rounded p-1 fs-6">
+             {{app.name}}
+           </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <div>
+    <table class="table-borderless w-100" data-ng-init="columns = 3">
+      <tr data-ng-repeat = "rowx in [].constructor(((app.links.length+columns)/columns) | integer) track by $index" data-ng-init="row = $index">
+        <td data-ng-repeat = "rowx in [].constructor(columns) track by $index" data-ng-init="col = $index">
+          <div data-ng-init="n = row*columns+col">
+            <div data-ng-if ="n < app.links.length">
+              <img class="img-fluid rounded" data-ng-src="image/store/store-{{n==0?'android':n==1?'apple':n==2?'window':n==3?'steam':'mac'}}.png" data-ng-click="download(app.links[n])"/>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+
+<!-- 
+  <div style="width: 2.5rem">
+	<img data-ng-src="image/store/{{app.index}}-small.png" class="img-fluid" alt="" />
+  </div>
+  <div class="w-100">
+    <p class="bg-primary rounded ps-1 mt-2">{{app.name}}</p>
+  </div>
+
+  <div class="col-sm-10">
+    <div class="row">
+      <div class="col-sm-4" data-ng-repeat="link in app.links track by $index">
+         <img class="img-fluid rounded" data-ng-src="image/store/store-{{$index==0?'android':$index==1?'apple':$index==2?'window':$index==3?'steam':'mac'}}.png"/>
+      </div>
+    </div>
+  </div>
+-->
+
+  <div class="mt-2">
+    <p class="text-secondary fs-8">{{app.introduce}}</p>
+  </div>
+
+</div>
+</div>

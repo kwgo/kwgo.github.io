@@ -1,0 +1,78 @@
+<div data-ng-controller="site-game-controll">
+
+  <div class="row pd-2">
+	<ul class="nav nav-tabs">
+	  <li class="nav-item">
+	    <a class="nav-link {{gameIndex == 0 ? 'active' : ''}}" data-bs-toggle="tab" href="" data-ng-click="selectGame(0)">Collection</a>
+	  </li>
+	  <li class="nav-item">
+	    <a class="nav-link {{gameIndex == 1 ? 'active' : ''}}" data-bs-toggle="tab" href="" data-ng-click="selectGame(1)">2-3 Box</a>
+	  </li>
+	  <li class="nav-item">
+	    <a class="nav-link {{gameIndex == 2 ? 'active' : ''}}" data-bs-toggle="tab" href="" data-ng-click="selectGame(2)">3-4 Box</a>
+	  </li>
+	  <li class="nav-item">
+	    <a class="nav-link {{gameIndex == 3 ? 'active' : ''}}" data-bs-toggle="tab" href="" data-ng-click="selectGame(3)">5-6 Box</a>
+	  </li>
+	</ul>
+  </div>
+  
+  <div class="row pd-2 mb-3">
+    <div class="rounded-bottom border-start border-end border-bottom" data-ng-if="stageIndex < 0" data-ng-init="columns = 10">
+	  <table class="table-borderless mb-1 w-100">
+	    <tr data-ng-repeat = "rowx in [].constructor(((stageCount+columns)/columns) | integer) track by $index" data-ng-init="row = $index">
+	      <td data-ng-repeat = "rowx in [].constructor(columns) track by $index" data-ng-init="col = $index">
+	        <div class="h-25 text-center fs-7" data-ng-if="row * columns + col < stageCount">
+	          <a href="" data-ng-class="{true: 'text-success', false: 'text-primary'}[isSuccessStage(gameIndex, row * columns + col)]" data-ng-click="selectStage(gameIndex, row * columns + col)">
+	            {{row * columns + col + 1}}
+	          </a>
+	        </div>
+	      </td>
+	    </tr>
+	  </table>
+    </div>
+
+    <div class="rounded-bottom border-start border-end border-bottom" data-ng-if="stageIndex >= 0" >
+      <div class="container text-end text-secondary fs-8" id="titler"></div>
+      <div class="rounded d-flex justify-content-center no-focus-style ms-1 me-1 mb-3" id="container" tabindex="0"></div>
+    </div>
+  
+  	<div class="row text-secondary" data-ng-if="stageIndex >= 0">  
+      <div class="col-sm-6 ps-1 pe-0">
+        <font size="-2">
+          <b class="text-danger">How!</b>
+          Left-click/Tap(Move) and Right-click/Long-press(Push)
+        </font>
+      </div>
+      <div class="col-sm-6 pe-0">
+        <font size="-2">
+          Keys:
+          <span class="text-primary" role="button" data-ng-click="moveStep(0)">Left</span>,
+          <span class="text-primary" role="button" data-ng-click="moveStep(1)">Up</span>,
+          <span class="text-primary" role="button" data-ng-click="moveStep(2)">Right</span>,
+          <span class="text-primary" role="button" data-ng-click="moveStep(3)">Down</span> and
+          <span class="text-primary" role="button" data-ng-click="moveStep(-1)">BackSpace</span>
+        </font>
+      </div>
+    </div>
+  </div>
+  
+  <div class="modal" id="successModal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title text-primary">Level {{stageIndex+1}}</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p class="fs-1 text-center text-secondary">Congratulations!</p> 
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" data-bs-dismiss="modal" data-ng-show="stageIndex < stageCount-1" data-ng-click="goNext()">Next Level</button>
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

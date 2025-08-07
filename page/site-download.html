@@ -1,0 +1,53 @@
+<div class="row" data-ng-controller="site-download-controll">
+
+<div class="col-sm-6 mb-4 border-bottom" data-ng-repeat="app in apps">
+
+  <div class="mt-1">
+    <table class="table-borderless">
+      <tr>
+        <td class="pt-1 pe-1" style="width: 3.00rem">
+          <img data-ng-src="image/store/{{app.index}}-small.png" class="img-fluid rounded" alt="" />
+        </td>
+        <td class="align-bottom pb-1">
+           <div class="fw-bold p-1 fs-5">
+             {{app.name}}
+           </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="mt-1">
+    <p class="text-primary fs-7">{{app.introduce}}</p>
+  </div>
+
+  <div class="mt-1">
+    <table class="table-borderless" data-ng-init="columns = 3">
+      <tr data-ng-repeat = "rowx in [].constructor(((app.links.length+columns)/columns) | integer) track by $index" data-ng-init="row = $index">
+        <td data-ng-repeat = "rowx in [].constructor(columns) track by $index" data-ng-init="col = $index">
+          <div data-ng-init="n = row*columns+col">
+          	<div data-ng-if ="n < app.links.length">
+              <img class="img-fluid rounded" data-ng-src="image/store/store-{{n==0?'android':n==1?'apple':n==2?'window':n==3?'steam':'mac'}}.png" data-ng-click="download(app.links[n])"/>
+			</div>          
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="mt-1 rounded" data-ng-if="app.video.length > 0">
+	<iframe class="rounded" width="100%" height="240" src="{{app.video | trustAsResourceUrl}}" frameborder="0" allowfullscreen></iframe>
+  </div>
+  
+  <div class="mt-1 mb-2">
+ 	<img data-ng-src="image/store/{{app.index}}-banner.jpg" class="img-fluid rounded" alt="" />
+  </div>
+  
+  <div class="mt-1 text-secondary fs-7 me-2">
+    <pre class="" style="display: flex; white-space: normal; word-break: break-word;">
+      {{app.description}}
+    </pre>
+  </div>
+
+</div>
+</div>

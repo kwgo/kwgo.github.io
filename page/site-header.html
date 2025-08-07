@@ -1,0 +1,49 @@
+<div data-ng-controller="site-header-controll">
+
+  <div class="row mt-1 mb-1">
+    <table class="table-borderless w-100">
+      <tr>
+        <td class="pt-1 pe-1" style="width: 10rem">
+     	  <img class="img-fluid " src="image/logo/logo-bg.gif" alt="www.JChipGame.com" />
+        </td>
+        <td>
+			 <div class="d-flex justify-content-end">
+				  <span class="badge ms-1 mt-1 mb-1 btn-primary" data-ng-click="goPage('game')">Game</span>
+			      <span class="badge ms-1 mt-1 mb-1 btn-secondary" data-ng-click="goPage('download')">Download</span>
+			      <span class="badge ms-1 mt-1 mb-1 btn-danger" data-ng-click="goPage('other')">Others</span>
+			      <span class="badge ms-1 mt-1 mb-1 btn-success" data-bs-toggle="modal" data-bs-target="#contactModal">Contact us</span>
+			 </div>
+			<div>
+		          <p class="bg-primary rounded fw-bold ps-1">Welcome to Sokoban (Boxman) Online</p>
+		    </div>
+		</td>
+      </tr>
+    </table>
+  </div>
+  
+  <div class="modal" id="contactModal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Contact us</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form id="form">
+            <div class="form-group">
+              <input class="form-control input-sm" id="email" data-ng-model="email.address" type="text" placeholder="Email (optional)">
+            </div>
+            <div class="form-group mt-2">
+              <textarea class="form-control input-lg" id="message" data-ng-model="email.message" rows="6" placeholder="What's up?" required></textarea>
+            </div>
+          </form>
+        </div>
+       <div class="modal-footer">
+          <button type="button" class="btn btn-success" data-bs-dismiss="modal" data-ng-click="send(email)">Send</button>
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
